@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+    --light-grey: #dce4e3;
+    --text-color: #084236;
+}
+
+body{
+    background-color: var(--body-bg-color);
+}
+
+header{
+    background-color: var(--green);
+    height: 100vh;
+    width: 250px;
+}
+
+h1{
+    position: absolute;
+    left: 260px;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 15px;
+}
+
+nav ul li{
+    padding: 12px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+nav ul li:first-child{
+    background-color: var(--light-green);    
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    position: relative;
+    top: -3px;
+}
+
+nav ul li:hover{
+    background-color: var(--light-green);
+}
+
+.log{
+    background-color: var(--light-green);
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+}
+
+.log img:first-child{
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.texto span{
+    font-size: 12px;
+}
+
+.home{
+    position: absolute;
+    height: 100vh;
+    left: 250px;
+    top: 0;
+    width: calc(100% - 250px);
+    background-color: var(--body-bg-color);
+}
+
+.home .text{
+    margin: 15px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* ---- Header Close ---- */
+
+header.close{
+    width: 85px;
+}
+
+header.close .main{
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+header.close .main img:first-child{
+    display: none;
+}
+
+header.close ul li a{
+    margin: 0;
+    display: none;
+}
+
+header.close .log{
+    flex-direction: column;
+    align-items: center;
+    width: 85px;
+    padding: 10px;
+}
+
+header.close img:last-child{
+    width: 30px;
+}
+
+header.close .texto, header.close .log img:first-child{
+    display: none;
+}
+
+header.close ~ .home{
+    left: 85px;
+    width: calc(100% - 85px);
+}
+
